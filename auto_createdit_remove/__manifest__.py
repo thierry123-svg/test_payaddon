@@ -15,7 +15,7 @@
     'currency':'USD',
     'website': "https://ga-ttek.com",
     'license':'LGPL-3'
-    'depends': [
+    'depends': [  # Indentation added here
         'stock',
         'account',
         'purchase',
