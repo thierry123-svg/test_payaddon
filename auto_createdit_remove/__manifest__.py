@@ -29,7 +29,6 @@
         'payment',
         'fleet',
         'fleet_vehicle_inspection',
-        'om_account_reports',
         'uom',
         'purchase_order_type',
         'purchase_request_type',

@@ -508,18 +508,6 @@
              </xpath>
         </field>
     </record>
-
-     <record id="view_account_financial_report_line_form_remove_options" model="ir.ui.view">
-        <field name="name">account.financial.html.report.line.form.inherit</field>
-        <field name="model">account.financial.html.report.line</field>
-        <field name="inherit_id" ref="om_account_reports.view_account_financial_report_line_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='parent_id']" position="attributes">
-                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
-             </xpath>
-        </field>
-    </record>
-
     
     <!-- Inventory remove options -->
     <record id="view_stock_picking_form_remove_options" model="ir.ui.view">
