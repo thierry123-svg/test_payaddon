@@ -31,7 +31,6 @@
         'fleet_vehicle_inspection',
         'uom',
         'purchase_order_type',
-        'purchase_request_type',
     ],
     'data': [
         'views/account_stock_employee_remove_option_view.xml',

@@ -90,17 +90,6 @@
         </field>
     </record>
 
-    <record id="view_purchase_request_remove_options" model="ir.ui.view">
-        <field name="name">purchase.request.type.inherit</field>
-        <field name="model">purchase.request.type</field>
-        <field name="inherit_id" ref="purchase_request_type.view_purchase_request_type_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='picking_type_id']" position="attributes">
-                  <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-        </field>
-    </record>
-
     <record id="view_purchase_order_remove_options" model="ir.ui.view">
         <field name="name">purchase.order.type.inherit</field>
         <field name="model">purchase.order.type</field>
