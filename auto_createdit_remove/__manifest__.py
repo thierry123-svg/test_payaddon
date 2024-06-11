@@ -15,8 +15,14 @@
     'currency':'USD',
     'website': "https://ga-ttek.com",
     'license':'LGPL-3'
-    'depends': ['base','stock','account','purchase',
-                'hr','account_financial_report','maintenance','repair'],
+    'depends': [
+        'base',
+        'stock',
+        'account',
+        'purchase',
+        'hr',
+        'account_financial_report',
+        'maintenance','repair'],
     'data': [
         'views/account_stock_employee_remove_option_view.xml',
         'views/purchase_remove_option_view.xml',
