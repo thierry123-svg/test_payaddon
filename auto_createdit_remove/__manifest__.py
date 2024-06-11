@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "auto_createdit_remove",
+    'name': "Rapid Creation Edit Remove",
     'version': '0.1',
     'summary': """
         This module is use to automatically remove the create edit option in view""",
