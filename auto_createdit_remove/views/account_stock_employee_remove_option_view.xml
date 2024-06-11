@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+      <record id="view_crossovered_budget_form_remove_options" model="ir.ui.view">
+        <field name="name">crossovered.budget.view.form.inherit</field>
+        <field name="model">crossovered.budget</field>
+        <field name="inherit_id" ref="om_account_budget.crossovered_budget_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='crossovered_budget_line']/tree/field[@name='analytic_account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='crossovered_budget_line']/tree/field[@name='general_budget_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_asset_form_remove_options" model="ir.ui.view">
+        <field name="name">account.asset.view.form.inherit</field>
+        <field name="model">account.asset</field>
+        <field name="inherit_id" ref="om_account_asset.view_account_asset_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_asset_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='account_depreciation_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='account_depreciation_expense_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='journal_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='account_analytic_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='analytic_tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_general_ledger_form_remove_options" model="ir.ui.view">
+        <field name="name">general.ledger.report.wizard.form.inherit</field>
+        <field name="model">general.ledger.report.wizard</field>
+        <field name="inherit_id" ref="account_financial_report.general_ledger_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_range_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_journal_ledger_form_remove_options" model="ir.ui.view">
+        <field name="name">journal.ledger.report.wizard.form.inherit</field>
+        <field name="model">journal.ledger.report.wizard</field>
+        <field name="inherit_id" ref="account_financial_report.journal_ledger_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_range_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='journal_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_trial_ledger_form_remove_options" model="ir.ui.view">
+        <field name="name">trial.balance.report.wizard.form.inherit</field>
+        <field name="model">trial.balance.report.wizard</field>
+        <field name="inherit_id" ref="account_financial_report.trial_balance_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_range_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='date_range_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_vat_report_wizard_view_form_remove_options" model="ir.ui.view">
+        <field name="name">vat.report.wizard.form.inherit</field>
+        <field name="model">vat.report.wizard</field>
+        <field name="inherit_id" ref="account_financial_report.vat_report_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_range_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- journal ids on tic payment details -->
+
+    <record id="view_account_fiscal_term_form_remove_options" model="ir.ui.view">
+        <field name="name">account.fiscal.position.form.inherit</field>
+        <field name="model">account.fiscal.position</field>
+        <field name="inherit_id" ref="account.view_account_position_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_ids']/tree/field[@name='account_src_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_account_form_remove_options" model="ir.ui.view">
+        <field name="name">account.account.form.inherit</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='group_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='tax_ids']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='allowed_journal_ids']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Maintenance remove options -->
+    <record id="maintenance_request_remove_options" model="ir.ui.view">
+        <field name="name">maintenance.request.line.form.inherit</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='equipment_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='maintenance_kind_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form.line.form.inherit</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='maintenance_team_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='technician_user_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+    
+
+    <record id="view_equipment_category_view_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.category.form.inherit</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='category_parent_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+                <xpath expr="//field[@name='sequence_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+                <xpath expr="//field[@name='reception_template']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <!-- Account remove options -->
+    <record id="account_move_remove_options" model="ir.ui.view">
+        <field name="name">account.move.line.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='bill_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='campaign_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='source_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='medium_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='fiscal_position_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='invoice_incoterm_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+            <xpath expr="//page[@name='other_info']//group[@name='sale_info_group']//field[@name='partner_bank_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+            <xpath expr="//page/field[@name='invoice_line_ids']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_remove_options" model="ir.ui.view">
+        <field name="name">account.payment.form.inherit</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='partner_bank_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_reconcile_remove_options" model="ir.ui.view">
+        <field name="name">account.reconcile.model.form.inherit</field>
+        <field name="model">account.reconcile.model</field>
+        <field name="inherit_id" ref="account.view_account_reconcile_model_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_account_journal_form" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type_control_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+
+              <xpath expr="//field[@name='account_control_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_account_fiscal_position_form" model="ir.ui.view">
+        <field name="name">account.fiscal.position.form.inherit</field>
+        <field name="model">account.fiscal.position</field>
+        <field name="inherit_id" ref="account.view_account_position_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_ids']/tree[@name='tax_map_tree']/field[@name='tax_src_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+     <record id="view_payment_token_form_view" model="ir.ui.view">
+        <field name="name">payment.token.form.inherit</field>
+        <field name="model">payment.token</field>
+        <field name="inherit_id" ref="payment.payment_token_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='acquirer_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_payment_token_form_category" model="ir.ui.view">
+        <field name="name">product.category.form.inherit</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='operating_unit_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='route_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_supplierinfo_tree_view2" model="ir.ui.view">
+        <field name="name">product.supplierinfo.form.inherit</field>
+        <field name="model">product.supplierinfo</field>
+        <field name="inherit_id" ref="purchase.product_supplierinfo_tree_view2"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_view_partner_form_remove_options" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//page[@name='sales_purchases']//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_property_form_remove_options" model="ir.ui.view">
+        <field name="name">res.partner.property.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='bank_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+
+    <record id="view_acquirer_form_form_remove_options" model="ir.ui.view">
+        <field name="name">payment.acquirer.form.inherit</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='payment_icon_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='journal_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='country_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_setup_bank_account_wizard_remove_options" model="ir.ui.view">
+        <field name="name">account.online.sync.res.partner.bank</field>
+        <field name="model">account.setup.bank.manual.config</field>
+        <field name="inherit_id" ref="account.setup_bank_account_wizard"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='bank_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_form_remove_options" model="ir.ui.view">
+        <field name="name">account.move.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='line_ids']/tree/field[@name='account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="tax_adjustements_form_remove_options" model="ir.ui.view">
+        <field name="name">tax.adjustments.wizard.form.inherit</field>
+        <field name="model">tax.adjustments.wizard</field>
+        <field name="inherit_id" ref="account.tax_adjustments_wizard"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='debit_account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='credit_account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="account_bank_statement_form_remove_options" model="ir.ui.view">
+        <field name="name">account.bank.statement.form.inherit</field>
+        <field name="model">account.bank.statement</field>
+        <field name="inherit_id" ref="account.view_bank_statement_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='line_ids']/tree/field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="account_analytic_line_form_remove_options" model="ir.ui.view">
+        <field name="name">account.analytic.line.form.inherit</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='move_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="account_analytic_default_form_remove_options" model="ir.ui.view">
+        <field name="name">account.analytic.group.form.form.inherit</field>
+        <field name="model">account.analytic.group</field>
+        <field name="inherit_id" ref="analytic.account_analytic_group_form_view"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+
+    <record id="account_analytic_account_form_remove_options" model="ir.ui.view">
+        <field name="name">analytic.analytic.account.form.inherit</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='group_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="crossovered_budget_id_analytic_form_remove_options" model="ir.ui.view">
+        <field name="name">account.analytic.crossovered.form.form.inherit</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="om_account_budget.view_account_analytic_account_form_inherit_budget"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='crossovered_budget_line']/tree/field[@name='crossovered_budget_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+             <xpath expr="//field[@name='crossovered_budget_line']/tree/field[@name='general_budget_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_analytic_default_form_remove_options" model="ir.ui.view">
+        <field name="name">account.analytic.default.form.form.inherit</field>
+        <field name="model">account.analytic.default</field>
+        <field name="inherit_id" ref="account.view_account_analytic_default_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='analytic_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='analytic_tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='account_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_financial_report_form_remove_options" model="ir.ui.view">
+        <field name="name">account.financial.html.report.form.inherit</field>
+        <field name="model">account.financial.html.report</field>
+        <field name="inherit_id" ref="om_account_reports.view_account_financial_report_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='generated_menu_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='applicable_filters_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+     <record id="view_account_financial_report_line_form_remove_options" model="ir.ui.view">
+        <field name="name">account.financial.html.report.line.form.inherit</field>
+        <field name="model">account.financial.html.report.line</field>
+        <field name="inherit_id" ref="om_account_reports.view_account_financial_report_line_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    
+    <!-- Inventory remove options -->
+    <record id="view_stock_picking_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='batch_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_warehouse_orderpoint_tree_editable_remove_options" model="ir.ui.view">
+        <field name="name">stock.warehouse.orderpoint.tree.editable.inherit</field>
+        <field name="model">stock.warehouse.orderpoint</field>
+        <field name="inherit_id" ref="stock.view_warehouse_orderpoint_tree_editable"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_inventory_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.inventory.form.inherit</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='product_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_scrap_form_view" model="ir.ui.view">
+        <field name="name">stock.scrap.form.inherit</field>
+        <field name="model">stock.scrap</field>
+        <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_type_form" model="ir.ui.view">
+        <field name="name">stock.picking.type.form.inherit</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.view_picking_type_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='return_picking_type_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_warehouse_orderpoint_tree_editable_config" model="ir.ui.view">
+        <field name="name">stock.warehouse.orderpoint.tree.editable.config.form.inherit</field>
+        <field name="model">stock.warehouse.orderpoint</field>
+        <field name="inherit_id" ref="stock.view_warehouse_orderpoint_tree_editable_config"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+
+    <record id="view_stock_scrap_remove_options" model="ir.ui.view">
+        <field name="name">stock.scrap.form.inherit</field>
+        <field name="model">stock.scrap</field>
+        <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='package_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_landed_cost_remove_options" model="ir.ui.view">
+        <field name="name">stock.scrap.form.inherit</field>
+        <field name="model">stock.landed.cost</field>
+        <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='picking_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='vendor_bill_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='cost_lines']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_rule_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.rule.form.inherit</field>
+        <field name="model">stock.rule</field>
+        <field name="inherit_id" ref="stock.view_stock_rule_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='route_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='warehouse_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='propagate_warehouse_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_packaging_form_remove_options" model="ir.ui.view">
+        <field name="name">product.packaging.form.inherit</field>
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_form_view"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_delivery_carrier_form_remove_options" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.inherit</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='country_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='state_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_picking_batch_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.picking.batch.form.inherit</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <!-- Employee remove options -->
+
+    <record id="view_employee_form_remove_options" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+               <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+               <xpath expr="//field[@name='coach_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='address_home_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+              <xpath expr="//field[@name='job_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_department_form_remove_options" model="ir.ui.view">
+        <field name="name">hr.department.form.inherit</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='manager_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+               <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+     <record id="view_hr_job_form_remove_options" model="ir.ui.view">
+        <field name="name">hr.job.form.inherit</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <!-- Stock request remove options -->
+     <record id="view_stock_request_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.request.form.inherit</field>
+        <field name="model">stock.request</field>
+        <field name="inherit_id" ref="stock_request.view_stock_request_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_request_orders_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.request.order.form.inherit</field>
+        <field name="model">stock.request.order</field>
+        <field name="inherit_id" ref="stock_request.stock_request_order_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+               <xpath expr="//field[@name='procurement_group_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_production_lot_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.production.lot.form.inherit</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_quant_package_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.quant.package.form.inherit</field>
+        <field name="model">stock.quant.package</field>
+        <field name="inherit_id" ref="stock.view_quant_package_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='packaging_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+     <record id="view_warehouse_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.inherit</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='default_user_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+     <record id="view_stock_quant_form_editable_form_remove_options" model="ir.ui.view">
+        <field name="name">stock.quant.form.inherit</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.view_stock_quant_form_editable"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='package_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+    
+    <!-- Purchase request form -->
+    <record id="view_purchase_request_form_remove_options" model="ir.ui.view">
+        <field name="name">purchase.request.form.inherit</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='requested_by']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='assigned_to']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+             <xpath expr="//field[@name='group_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+             </xpath>
+        </field>
+    </record>
+
+    <record id="view_purchase_request_type_remove_options" model="ir.ui.view">
+        <field name="name">purchase.request.type.form.inherit</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request_type.view_purchase_request_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='request_type']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_purchase_request_department_remove_options" model="ir.ui.view">
+        <field name="name">purchase.request.department.form.inherit</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request_department.view_purchase_request_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+     <record id="view_picking_type_remove_options" model="ir.ui.view">
+        <field name="name">picking.type.form.inherit</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="tic_purchase_flow.tic_purchase_request_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+     <record id="view_product_template_tags_remove_options" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product_template_tags.product_template_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_operating_unit_remove_options" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product_operating_unit.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='operating_unit_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+    
+    <!-- Repair remove options -->
+    <record id="view_repair_form_remove_options" model="ir.ui.view">
+        <field name="name">repair.form.inherit</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='maintenance_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='address_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='type_maintenance_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='operations']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+                 <xpath expr="//field[@name='operations']/tree/field[@name='lot_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='operations']/tree/field[@name='product_uom']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+                <xpath expr="//field[@name='operations']/tree/field[@name='tax_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+                <xpath expr="//field[@name='fees_lines']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+                <xpath expr="//field[@name='fees_lines']/tree/field[@name='tax_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+    
+    <!-- parc automobile remove options -->
+    <record id="view_parc_auto_remove_options" model="ir.ui.view">
+        <field name="name">fuel.filling.history.form.inherit</field>
+        <field name="model">fuel.filling.history</field>
+        <field name="inherit_id" ref="tic_fleet_fuel_tank.fuel_filling_history_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='supplier_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='fuel_filling_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='fuel_type']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+     <record id="view_fleet_vehicle_log_fuel_form_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.log.fuel.form.inherit</field>
+        <field name="model">fleet.vehicle.log.fuel</field>
+        <field name="inherit_id" ref="tic_fleet_fuel_tank.view_fleet_vehicle_log_fuel_inherit_bi"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+     <record id="view_driver_form_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.log.fuel.driver.form.inherit</field>
+        <field name="model">fleet.vehicle.log.fuel</field>
+        <field name="inherit_id" ref="tic_fleet_fuel_tank.fleet_vehicle_log_fuel_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='vehicle_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>  
+              <xpath expr="//field[@name='driver_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='vendor_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+                <xpath expr="//field[@name='city_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_form_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.inherit</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='driver_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='manager_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+
+               <xpath expr="//field[@name='model_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+               <xpath expr="//field[@name='future_driver_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_contract_form_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.log.contract.form.inherit</field>
+        <field name="model">fleet.vehicle.log.contract</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_log_contract_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='vehicle_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='insurer_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='cost_subtype_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='service_ids']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_vehicle_log_services_form_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.log.services.form.inherit</field>
+        <field name="model">fleet.vehicle.log.services</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='service_type_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='vehicle_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='purchaser_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='vendor_id']" position="attributes">
+                <attribute name="options">{'no_create':True}</attribute>
+              </xpath>
+        </field>
+    </record>
+
+      <record id="view_fleet_vehicle_inspection_form_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.inspection.form.inherit</field>
+        <field name="model">fleet.vehicle.inspection</field>
+        <field name="inherit_id" ref="fleet_vehicle_inspection.fleet_vehicle_inspection_form_view"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='vehicle_id']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+              <xpath expr="//field[@name='inspected_by']" position="attributes">
+                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+              </xpath>
+        </field>
+      </record>
+
+      <record id="view_fleet_vehicle_odometer_tree_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.odometer.form.inherit</field>
+        <field name="model">fleet.vehicle.odometer</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_odometer_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vehicle_id']" position="attributes">
+              <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
+            </xpath>
+        </field>
+      </record>
+
+    <record id="view_fleet_recap_report_wizard_remove_options" model="ir.ui.view">
+        <field name="name">fleet.recap.report.wizard.form.inherit</field>
+        <field name="model">fleet.recap.report.wizard</field>
+        <field name="inherit_id" ref="tic_fleet_report.payroll_recap_report_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='supplier_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='fuel_filling_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='fuel_type']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_fleet_recap_cons_report_wizard_remove_options" model="ir.ui.view">
+        <field name="name">fleet.recap.cons.report.wizard.form.inherit</field>
+        <field name="model">fleet.recap.cons.report.wizard</field>
+        <field name="inherit_id" ref="tic_fleet_report.cons_recap_report_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='driver_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vehicle_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='city_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_fleet_vehicle_model_remove_options" model="ir.ui.view">
+        <field name="name">fleet.vehicle.model.form.inherit</field>
+        <field name="model">fleet.vehicle.model</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='brand_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vehicle_type_id']" position="attributes">
+              <attribute name="options">{'no_create':True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
