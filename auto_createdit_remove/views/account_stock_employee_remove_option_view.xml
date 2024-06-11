@@ -533,9 +533,6 @@
              <xpath expr="//field[@name='picking_type_id']" position="attributes">
                 <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
              </xpath>
-             <xpath expr="//field[@name='batch_id']" position="attributes">
-                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
-             </xpath>
               <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="attributes">
                 <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
               </xpath>
@@ -851,38 +848,6 @@
         </field>
     </record>
 
-     <record id="view_picking_type_remove_options" model="ir.ui.view">
-        <field name="name">picking.type.form.inherit</field>
-        <field name="model">purchase.request</field>
-        <field name="inherit_id" ref="tic_purchase_flow.tic_purchase_request_form"/>
-        <field name="arch" type="xml">
-              <xpath expr="//field[@name='picking_type_id']" position="attributes">
-                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
-              </xpath>
-        </field>
-    </record>
-
-     <record id="view_product_template_tags_remove_options" model="ir.ui.view">
-        <field name="name">product.template.form.inherit</field>
-        <field name="model">product.template</field>
-        <field name="inherit_id" ref="product_template_tags.product_template_form_view"/>
-        <field name="arch" type="xml">
-              <xpath expr="//field[@name='tag_ids']" position="attributes">
-                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
-              </xpath>
-        </field>
-    </record>
-
-    <record id="view_product_operating_unit_remove_options" model="ir.ui.view">
-        <field name="name">product.template.form.inherit</field>
-        <field name="model">product.template</field>
-        <field name="inherit_id" ref="product_operating_unit.product_template_only_form_view"/>
-        <field name="arch" type="xml">
-              <xpath expr="//field[@name='operating_unit_ids']" position="attributes">
-                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
-              </xpath>
-        </field>
-    </record>
     
     <!-- Repair remove options -->
     <record id="view_repair_form_remove_options" model="ir.ui.view">
@@ -945,37 +910,6 @@
                 <attribute name="options">{'no_create':True}</attribute>
               </xpath>
                <xpath expr="//field[@name='fuel_type']" position="attributes">
-                <attribute name="options">{'no_create':True}</attribute>
-              </xpath>
-        </field>
-    </record>
-
-     <record id="view_fleet_vehicle_log_fuel_form_remove_options" model="ir.ui.view">
-        <field name="name">fleet.vehicle.log.fuel.form.inherit</field>
-        <field name="model">fleet.vehicle.log.fuel</field>
-        <field name="inherit_id" ref="tic_fleet_fuel_tank.view_fleet_vehicle_log_fuel_inherit_bi"/>
-        <field name="arch" type="xml">
-              <xpath expr="//field[@name='employee_id']" position="attributes">
-                <attribute name="options">{'no_create':True, 'no_open':True}</attribute>
-              </xpath>
-        </field>
-    </record>
-
-     <record id="view_driver_form_remove_options" model="ir.ui.view">
-        <field name="name">fleet.vehicle.log.fuel.driver.form.inherit</field>
-        <field name="model">fleet.vehicle.log.fuel</field>
-        <field name="inherit_id" ref="tic_fleet_fuel_tank.fleet_vehicle_log_fuel_view_form"/>
-        <field name="arch" type="xml">
-              <xpath expr="//field[@name='vehicle_id']" position="attributes">
-                <attribute name="options">{'no_create':True}</attribute>
-              </xpath>  
-              <xpath expr="//field[@name='driver_id']" position="attributes">
-                <attribute name="options">{'no_create':True}</attribute>
-              </xpath>
-              <xpath expr="//field[@name='vendor_id']" position="attributes">
-                <attribute name="options">{'no_create':True}</attribute>
-              </xpath>
-                <xpath expr="//field[@name='city_id']" position="attributes">
                 <attribute name="options">{'no_create':True}</attribute>
               </xpath>
         </field>
@@ -1072,40 +1006,6 @@
             </xpath>
         </field>
       </record>
-
-    <record id="view_fleet_recap_report_wizard_remove_options" model="ir.ui.view">
-        <field name="name">fleet.recap.report.wizard.form.inherit</field>
-        <field name="model">fleet.recap.report.wizard</field>
-        <field name="inherit_id" ref="tic_fleet_report.payroll_recap_report_wizard"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='supplier_id']" position="attributes">
-              <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-            <xpath expr="//field[@name='fuel_filling_id']" position="attributes">
-              <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-            <xpath expr="//field[@name='fuel_type']" position="attributes">
-              <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-        </field>
-    </record>
-
-    <record id="view_fleet_recap_cons_report_wizard_remove_options" model="ir.ui.view">
-        <field name="name">fleet.recap.cons.report.wizard.form.inherit</field>
-        <field name="model">fleet.recap.cons.report.wizard</field>
-        <field name="inherit_id" ref="tic_fleet_report.cons_recap_report_wizard"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='driver_id']" position="attributes">
-              <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-            <xpath expr="//field[@name='vehicle_id']" position="attributes">
-              <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-            <xpath expr="//field[@name='city_id']" position="attributes">
-              <attribute name="options">{'no_create':True}</attribute>
-            </xpath>
-        </field>
-    </record>
 
      <record id="view_fleet_vehicle_model_remove_options" model="ir.ui.view">
         <field name="name">fleet.vehicle.model.form.inherit</field>

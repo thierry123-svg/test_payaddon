@@ -22,7 +22,17 @@
         'hr',
         'account_financial_report',
         'maintenance',
-        'repair'
+        'repair',
+        'om_account_budget',
+        'account_financial_report',
+        'analytic',
+        'payment',
+        'fleet',
+        'fleet_vehicle_inspection',
+        'om_account_reports',
+        'uom',
+        'purchase_order_type',
+        'purchase_request_type',
     ],
     'data': [
         'views/account_stock_employee_remove_option_view.xml',
