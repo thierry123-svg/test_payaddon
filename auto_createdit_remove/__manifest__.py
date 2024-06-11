@@ -14,7 +14,7 @@
     'price': '50.0',
     'currency': 'USD',
     'website': 'https://ga-ttek.com',
-    'license': 'LGPL-3',
+    'license': 'AGPL-3',
     'depends': [
         'stock',
         'account',
