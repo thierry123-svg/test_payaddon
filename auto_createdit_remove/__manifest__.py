@@ -12,9 +12,9 @@
     'author': 'Gattek Team',
     'maintainer': 'Gattek Team',
     'price': '50.0',
-    'currency':'USD',
+    'currency': 'USD',
     'website': 'https://ga-ttek.com',
-    'license': 'LGPL-3'
+    'license': 'LGPL-3',
     'depends': [
         'stock',
         'account',
